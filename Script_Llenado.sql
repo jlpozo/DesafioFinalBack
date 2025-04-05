@@ -4,7 +4,7 @@ insert into categoria (nombre,descripcion) values ('Accesorios','Descripcion Acc
 insert into categoria (nombre,descripcion) values ('Audio','Descripcion Audio');
 insert into categoria (nombre,descripcion) values ('Almacenamiento','Descripcion Almacenamiento');
 
-select * from categoria;
+--select * from categoria;
 
 INSERT INTO PRODUCTO (nombre, precio, marca, descripcion, caracteristicas, stock, imagen_url, categoria_id)
 VALUES ('iPhone 15 Pro', 999.99, 'Apple', 'Último modelo de iPhone con chip A17 Bionic', 'Pantalla 6.1", 256GB almacenamiento, Triple cámara 48MP, iOS 17', 75, 'https://ejemplo.com/imagenes/iphone15pro.jpg', 1);
@@ -17,7 +17,7 @@ VALUES ('Sony WH-1000XM5', 349.95, 'Sony', 'Auriculares premium con cancelación
 INSERT INTO PRODUCTO (nombre, precio, marca, descripcion, caracteristicas, stock, imagen_url, categoria_id)
 VALUES ('SSD Samsung 990 Pro 2TB', 229.99, 'Samsung', 'Unidad de estado sólido de alta velocidad', 'NVMe PCIe 4.0, 7450MB/s lectura, 6900MB/s escritura, Disipador incluido', 60, 'https://ejemplo.com/imagenes/samsung-990pro.jpg', 5);
 
-select * from producto;
+--select * from producto;
 
 INSERT INTO USUARIO (nombre, email, password, telefono, es_admin)
 VALUES ('Carlos Rodríguez', 'carlos.rodriguez@ejemplo.com', '$2a$12$8KpW3FO7h4XR0vDYzI8GUuK9kZ7LK8cqXpxD1oKg9L1UPpyXOJFHu', '+34612345678', TRUE);
@@ -30,7 +30,13 @@ VALUES ('María García', 'maria.garcia@ejemplo.com', '$2a$12$45d8rYTzKGfpPHn9fq
 INSERT INTO USUARIO (nombre, email, password, telefono)
 VALUES ('Pedro Sánchez', 'pedro.sanchez@ejemplo.com', '$2a$12$wRCjFIrXbT4CgwUgQAJz3ecYNsO7CDKXsFmrJEMFjVtpnUvMZU2OW', '+34656789012');
 
-select * from usuario;
+INSERT INTO USUARIO (nombre, email, password, telefono)
+VALUES ('Administrador', 'admin@prueba.cl', '$2b$10$VmRliX8KYvOBF4TVd/e94u0NGfktrjy05dLQfk7iHe9IEGbvfPZxW', '+5699999999');
+
+INSERT INTO USUARIO (nombre, email, password, telefono)
+VALUES ('Usuario Comprador', 'usuario@prueba.cl', '$2b$10$VmRliX8KYvOBF4TVd/e94u0NGfktrjy05dLQfk7iHe9IEGbvfPZxW', '+5699999999');
+
+--select * from usuario;
 
 -- Insert en la tabla orden
 INSERT INTO orden (usuario_id, total, estado, direccion_envio)
@@ -46,7 +52,7 @@ VALUES (1, 4, 1, 349.95, 349.95);
 INSERT INTO detalle_orden (orden_id, producto_id, cantidad, precio_unitario, subtotal)
 VALUES (1, 5, 1, 229.99, 229.99);
 
-
+/*
 SELECT 
     o.id AS orden_id,
     o.fecha_creacion,
@@ -68,3 +74,4 @@ JOIN usuario u ON o.usuario_id = u.id
 JOIN detalle_orden dd ON o.id = dd.orden_id
 JOIN producto p ON dd.producto_id = p.id
 ORDER BY o.id, dd.producto_id;
+*/
