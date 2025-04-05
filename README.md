@@ -5,7 +5,7 @@ API REST para gestionar un marketplace de productos tecnológicos. Desarrollado 
 ## Estructura del proyecto
 
 ```
-DesafioMKP/
+DesafioFinalBack/
 ├── config/                # Configuración de la aplicación
 │   ├── database.js        # Configuración de conexión a PostgreSQL
 │   └── jwt.js             # Configuración de JWT para autenticación
@@ -123,11 +123,14 @@ La API utiliza JWT (JSON Web Tokens) para autenticación. Para acceder a rutas p
    ```
 
 ## Datos de acceso predeterminados
-
-El script de inicialización crea un usuario administrador:
-
-- Email: carlos.rodriguez@ejemplo.com
+### Usuario administrador
+- Email: admin@prueba.cl
 - Contraseña: admin123
+
+### Usuario comprador
+- Email: usuario@prueba.cl
+- Contraseña: 123456
+
 
 ## Pruebas
 
