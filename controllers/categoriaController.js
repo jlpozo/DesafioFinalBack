@@ -7,7 +7,7 @@ const db = require('../config/database');
 const listarCategorias = async (req, res, next) => {
   try {
     const result = await db.query(
-      'SELECT id, nombre, descripcion FROM CATEGORIA ORDER BY nombre'
+      'SELECT id, nombre, descripcion FROM CATEGORIA ORDER BY id'
     );
     
     res.status(200).json({
